@@ -1,0 +1,30 @@
+{
+	"name": "multiverse",
+	"version": "1.0.0",
+	"description": "Unofficial Foundry implementation of the Multiverse superhero RPG!",
+	"main": "module/Multiverse.mjs",
+	"author": "Mezryss <mezryss@minalien.dev>",
+	"license": "CC-BY-SA 4.0",
+	"private": true,
+	"type": "module",
+	"dependencies": {
+		"autoprefixer": "^10.4.15",
+		"cssnano": "^6.0.1",
+		"eslint": "^8.48.0",
+		"eslint-config-prettier": "^9.0.0",
+		"eslint-plugin-prettier": "^5.0.0",
+		"postcss": "^8.4.29",
+		"postcss-cli": "^10.1.0",
+		"postcss-import": "^15.1.0",
+		"postcss-nested": "^6.0.1",
+		"prettier": "^3.0.3"
+	},
+	"devDependencies": {
+		"@types/jquery": "^3.5.18"
+	},
+	"scripts": {
+		"build": "postcss -o Multiverse.css style/main.css",
+		"lint": "eslint module/ --ext .js,.mjs",
+		"format": "prettier --editorconfig --write module/"
+	}
+}

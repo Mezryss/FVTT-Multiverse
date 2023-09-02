@@ -1,0 +1,16 @@
+/.idea
+/.vscode
+/foundry
+/node_modules
+
+/Multiverse.css
+/Multiverse.zip
+
+packs/**/*.log
+packs/**/CURRENT
+packs/**/LOG
+packs/**/*.old
+packs/**/MANIFEST-*
+
+.DS_Store
+yarn-error.log

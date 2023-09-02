@@ -1,0 +1,7 @@
+* text=auto eol=lf
+packs/**/* binary
+*.ttf binary
+*.eot binary
+*.woff binary
+.png binary
+.jpg binary
