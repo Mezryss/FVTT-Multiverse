@@ -23,7 +23,7 @@
 		"@types/jquery": "^3.5.18"
 	},
 	"scripts": {
-		"build": "postcss -o Multiverse.css style/main.css",
+		"build": "postcss style/main.css -mo Multiverse.css",
 		"lint": "eslint module/ --ext .js,.mjs",
 		"format": "prettier --editorconfig --write module/"
 	}

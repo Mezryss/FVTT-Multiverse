@@ -4,6 +4,7 @@
 /node_modules
 
 /Multiverse.css
+/Multiverse.css.map
 /Multiverse.zip
 
 packs/**/*.log
