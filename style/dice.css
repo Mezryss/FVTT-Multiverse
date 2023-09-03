@@ -1,0 +1,73 @@
+:root {
+	--multiverse-die-color: #b01313;
+	--multiverse-die-filter: sepia(0.5) hue-rotate(-30deg);
+}
+
+.roll.d-multiverse {
+	&.fantastic {
+		color: var(--multiverse-die-color);
+		filter: var(--multiverse-die-filter);
+	}
+}
+
+.multiverse-roll {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: stretch;
+
+	.dice-rolls {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+
+		.roll {
+			position: unset;
+			min-width: 3rem;
+			line-height: 3rem;
+			background-size: 3rem 3rem;
+			font-size: 2rem;
+
+			&.max, &.min, &.fantastic {
+				filter: inherit;
+				color: inherit;
+			}
+
+			&:nth-of-type(2) {
+				color: var(--multiverse-die-color);
+				filter: var(--multiverse-die-filter);
+			}
+		}
+	}
+
+	.modifiers {
+		display: flex;
+		gap: 0.25em;
+		list-style: none;
+		font-size: 1.25em;
+		justify-content: center;
+
+		.modifier {
+			&:after {
+				display: inline;
+				content: ',';
+			}
+
+			&:last-of-type:after {
+				display: none;
+			}
+		}
+	}
+
+	.total {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: 1.5em;
+
+		&.fantastic {
+			color: var(--multiverse-die-color);
+		}
+	}
+}

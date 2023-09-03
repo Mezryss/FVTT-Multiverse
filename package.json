@@ -20,6 +20,7 @@
 		"prettier": "^3.0.3"
 	},
 	"devDependencies": {
+		"@types/handlebars": "^4.1.0",
 		"@types/jquery": "^3.5.18"
 	},
 	"scripts": {

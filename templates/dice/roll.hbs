@@ -1,0 +1,33 @@
+<div class="multiverse-roll">
+	{{#if flavor}}
+		<div class="dice-flavor">{{flavor}}</div>
+	{{/if}}
+	<div class="dice-tooltip">
+		<div class="dice-rolls">
+			{{#each dice}}
+				{{#with (lookup rolls 0)}}
+					<div class="roll {{ classes }}">{{#if @root.isPrivate}}?{{else}}{{ result }}{{/if}}</div>
+				{{/with}}
+			{{/each}}
+		</div>
+		{{#if modifiers}}
+			<div class="modifiers">
+				{{#each modifiers}}
+					<span class="modifier">{{ operator }}{{ number }}{{#if flavor}} ({{ flavor }}){{/if}}</span>
+				{{/each}}
+			</div>
+		{{/if}}
+		<hr />
+		<div class="total {{#if (and isFantastic (not isPrivate))}}fantastic{{/if}}">
+			{{#if isPrivate}}
+				?
+			{{else}}
+				{{#if isFantastic}}
+					<strong data-tooltip="{{ localize "Tooltips.Roll.FantasticResult" }}">{{total}}!</strong>
+				{{else}}
+					{{ total }}
+				{{/if}}
+			{{/if}}
+		</div>
+	</div>
+</div>
