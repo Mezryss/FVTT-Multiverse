@@ -18,6 +18,13 @@
 	flex-wrap: nowrap;
 	align-items: stretch;
 
+	.re-roll {
+		width: 100%;
+		text-align: center;
+		font-style: italic;
+		font-size: 1.25em;
+	}
+
 	.dice-rolls {
 		display: flex;
 		flex-direction: row;

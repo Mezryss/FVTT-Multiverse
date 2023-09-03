@@ -2,6 +2,15 @@
 	{{#if flavor}}
 		<div class="dice-flavor">{{flavor}}</div>
 	{{/if}}
+	{{#if isReRoll}}
+		<div class="re-roll">
+			{{#if withTrouble}}
+				{{localize "Chat.ReRolledWithTrouble"}}
+			{{else}}
+				{{localize "Chat.ReRolledWithEdge"}}
+			{{/if}}
+		</div>
+	{{/if}}
 	<div class="dice-tooltip">
 		<div class="dice-rolls">
 			{{#each dice}}

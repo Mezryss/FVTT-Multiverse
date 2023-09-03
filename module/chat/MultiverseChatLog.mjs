@@ -4,9 +4,9 @@ import MultiverseDie from '../dice/MultiverseDie.mjs';
  * Handles re-rolling a Multiverse Roll chat message with Edge or with Trouble.
  *
  * @param {JQuery} messageElement
- * @param forceLowest Whether it should forcibly re-roll the lowest die (for re-rolling with Trouble).
+ * @param withTrouble Whether it should forcibly re-roll the highest die (for re-rolling with Trouble).
  */
-async function doReRollForMessage(messageElement, forceLowest = false) {
+async function doReRollForMessage(messageElement, withTrouble = false) {
 	/** @type ChatMessage */
 	const message = game.messages.get(messageElement.data('messageId')).clone();
 	/** @type Roll */
@@ -14,11 +14,13 @@ async function doReRollForMessage(messageElement, forceLowest = false) {
 
 	// Clone the roll & preserve its existing terms.
 	const reRoll = roll.clone();
+	reRoll.options.isReRoll = true;
+	reRoll.options.withTrouble = withTrouble;
 	reRoll.terms = [...message.rolls[0].terms];
 
 	// Identify which term needs to be re-rolled.
 	let dieIndex = 0;
-	if (forceLowest) {
+	if (withTrouble) {
 		let highestValue = reRoll.terms[0].total;
 
 		// An M die is always considered the highest, no matter what.

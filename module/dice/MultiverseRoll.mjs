@@ -64,9 +64,11 @@ export default class MultiverseRoll extends Roll {
 			flavor: isPrivate ? null : flavor,
 			isFantastic,
 			isPrivate,
+			isReRoll: this.options.isReRoll,
 			modifiers,
 			total: isPrivate ? '?' : Math.round(this.total * 100) / 100,
 			user: game.user.id,
+			withTrouble: this.options.withTrouble,
 		};
 
 		return renderTemplate(template, chatData);

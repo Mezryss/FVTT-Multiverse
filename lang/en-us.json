@@ -8,7 +8,9 @@
 
 	"Chat": {
 		"ReRollWithEdge": "Re-Roll With Edge",
-		"ReRollWithTrouble": "Re-Roll With Trouble"
+		"ReRollWithTrouble": "Re-Roll With Trouble",
+		"ReRolledWithEdge": "Re-Rolled With Edge!",
+		"ReRolledWithTrouble": "Re-Rolled With Trouble!"
 	},
 
 	"Tooltips": {
