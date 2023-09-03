@@ -1,6 +1,8 @@
 :root {
 	--multiverse-die-color: #b01313;
 	--multiverse-die-filter: sepia(0.5) hue-rotate(-30deg);
+	--die-highlight-hover: #b04e4e;
+	--die-highlight-selected: #8a2f2f;
 }
 
 .roll.d-multiverse {
@@ -34,9 +36,29 @@
 				color: inherit;
 			}
 
+			&.selected {
+				filter: drop-shadow(3px 3px var(--die-highlight-selected)) drop-shadow(-3px -3px var(--die-highlight-selected));
+			}
+
 			&:nth-of-type(2) {
 				color: var(--multiverse-die-color);
 				filter: var(--multiverse-die-filter);
+
+				&.selected {
+					filter: var(--multiverse-die-filter) drop-shadow(3px 3px var(--die-highlight-selected)) drop-shadow(-3px -3px var(--die-highlight-selected));
+				}
+			}
+		}
+
+		[data-action="chat-select-die"] {
+			cursor: pointer;
+
+			&:hover {
+				filter: drop-shadow(3px 3px var(--die-highlight-hover)) drop-shadow(-3px -3px var(--die-highlight-hover)) !important;
+			}
+
+			&:nth-of-type(2):hover {
+				filter: var(--multiverse-die-filter) drop-shadow(3px 3px var(--die-highlight-hover)) drop-shadow(-3px -3px var(--die-highlight-hover)) !important;
 			}
 		}
 	}

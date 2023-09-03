@@ -6,6 +6,11 @@
 		}
 	},
 
+	"Chat": {
+		"ReRollWithEdge": "Re-Roll With Edge",
+		"ReRollWithTrouble": "Re-Roll With Trouble"
+	},
+
 	"Tooltips": {
 		"Roll": {
 			"FantasticResult": "An M was rolled on the Multiverse die! This will be either a Fantastic Success or a Fantastic Failure!"

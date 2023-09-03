@@ -1,3 +1,4 @@
+import { registerChatLog } from './chat/MultiverseChatLog.mjs';
 import MultiverseDie from './dice/MultiverseDie.mjs';
 import MultiverseRoll from './dice/MultiverseRoll.mjs';
 import { registerHandlebarsHelpers } from './HandlebarsHelpers.mjs';
@@ -9,6 +10,7 @@ Hooks.once('init', () => {
 	initMultiverseObject();
 
 	// Handle registration of misc. subsystems.
+	registerChatLog();
 	registerDice();
 	registerHandlebarsHelpers();
 

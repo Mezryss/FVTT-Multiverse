@@ -6,7 +6,7 @@
 		<div class="dice-rolls">
 			{{#each dice}}
 				{{#with (lookup rolls 0)}}
-					<div class="roll {{ classes }}">{{#if @root.isPrivate}}?{{else}}{{ result }}{{/if}}</div>
+					<span data-action="chat-select-die" data-die-index="{{ @index }}" class="roll {{ classes }}">{{#if @root.isPrivate}}?{{else}}{{ result }}{{/if}}</span>
 				{{/with}}
 			{{/each}}
 		</div>
